@@ -1,0 +1,13 @@
+Unit test explained for task 4
+
+    checkFull() with full array: This test checks that the function returns true, if pass an array that is full and pass 2nd argument as value 1. So we call checkFull(aFullArray, 1) and check if it returns true
+    checkFull() with 2 free spaces and 2 items to add: This test checks that the function returns false, when I pass an array with 2 free spaces and pass the 2nd argument as value 2. So we call checkFull(arrayWithTwoSpaces, 2) and check it returns false
+    extendArray(): check that newArray.length >= fullArray.length + noOfItems: This test checks the return value length to be equal to the length of the array of 1st argument and value of 2nd argument. If I pass an array of length 3 and pass the 2nd argument as value 3, the function should return an array whose length is 6.
+    insertItems(): test format of generated item: In this test, we pass an empty array of size 1, then we pass value 999 as the 2nd argument and value 1 as the 3rd argument. We then test that the return array's first element and check id is 1000, quantity is a value between 1 and 10, price is a value between 100 and 1000
+    insertItems(): add multiple items: In this test, we call the insertItems with an empty array of size 1, then we pass value 999 as the 2nd argument and 10 as the 3rd argument and check that there are 10 items in the array returned.
+    removeItem(): In this test, we pass an array with 3 items and remove the second item. We then check return value is 0 and we count the number of items (items with id != 0) and check that it is 2.
+    removeNonexistentItem: In this test, we pass an array with 3 items and pass an itemID that does not exist. We then check return value is -1.
+    printItems: In this test, we pass an array with 3 items and call printItems and check that call was possible.
+    sellItemSuccess: In this test, we test that the function by passing valid values and check if function returns 0 and that salesDate array is updated and sales array has the right values
+    sellItemNotFound: In this test, we pass an invalid item and check return value is -1
+    sellItemNotEnough: In this test, we pass an invalid value for noOfItemsToSell and check that return value is equal to available items. We try to sell an item that has 5 as quantity and ask to sell 6, we check the method return value is 5.
